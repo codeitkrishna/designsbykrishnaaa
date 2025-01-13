@@ -1,0 +1,72 @@
+.navbarMain {
+    width: 70vw;
+    transition: all 0.3s ease-in-out;
+    height:4vw;
+    min-height: 2.5rem;
+    margin: 1vw;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+    border-radius: 1.5vw;
+    justify-content:space-evenly;
+    background: linear-gradient(90deg, rgba(44, 53, 64, 0.50) 50%, rgba(46, 50, 74, 0.50) 70%);
+    padding: 1%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    opacity: 0.99;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Yatra One', serif;
+}
+
+.navbarMain.scrolled{
+    background: linear-gradient(90deg, rgba(44, 53, 64, 0.50) 50%, rgba(46, 50, 74, 0.50) 70%);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 2rem;
+    z-index: 100;
+    width:42vw;
+}
+
+.nav-links {
+    color: white;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    text-decoration: none;
+    padding: 0.5vw 1vw;
+    transition: all 0.3s ease;
+}
+
+.nav-links:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Override scrolled behavior for mobile screens */
+@media screen and (max-width: 768px) {
+    .navbarMain {
+        width: 92vw !important; /* Force full width */
+        transition: none; /* Remove transition effect */
+        height: auto; /* Allow height to adjust based on content */
+        min-height: 3rem; /* Slightly increased for better touch targets */
+        padding: 0.5rem;
+    }
+
+    .navbarMain.scrolled {
+        width: 92vw !important; /* Prevent width change on scroll */
+        backdrop-filter: blur(20px); /* Keep the blur effect */
+    }
+
+    .nav-links {
+        font-size: clamp(0.9rem, 4vw, 1.2rem); /* Adjusted font size for mobile */
+        padding: 0.5rem;
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+    .navbarMain {
+        margin: 0.5rem; /* Reduced margins */
+        border-radius: 1rem; /* Slightly reduced border radius */
+    }
+}

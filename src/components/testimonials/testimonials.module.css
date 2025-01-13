@@ -1,0 +1,56 @@
+.tMain{
+    width: 92vw;
+    height: 24vw;
+    margin:1vw;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2vw;
+}
+
+.tImage{
+    width: 49%;
+    height: 100%;
+    background-color: #1b2025;
+    border-radius: 1.5vw;
+    clip-path: fill-box;
+}
+.tImage1{
+    width: 49%;
+    height: 100%;
+    background-color: #1b2025;
+    border-radius: 1.5vw;
+    clip-path: fill-box;
+}
+.tImage img{
+    width: 100%;
+    height: 100%;
+}
+
+.testimonials{
+    width: 45vw;
+    height: 100%;
+    background-color: #1b2025;
+    border-radius: 1.5vw;
+    padding: 1vw;
+}
+
+@media screen and (max-width: 768px) {
+    .tMain {
+        /* width: 96vw;
+        height: auto;
+        margin: 2vw;
+        justify-content: center; */
+        display: none;
+    }
+
+    /* .tImage {
+        display: none;
+    }
+
+    .testimonials {
+        width: 86vw;
+        height: calc(88vw * 24/45);
+        min-height: 150px;
+        border-radius: 3vw;
+    } */
+}

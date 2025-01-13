@@ -1,0 +1,142 @@
+.skillsMain {
+    width: 92vw;
+    display: flex;
+    justify-content: flex-start;
+    margin: 1vw;
+    gap: 2vw;
+    flex-wrap: wrap;
+}
+
+.skill, .cta {
+    width: calc(25% - 1.5vw);
+    min-height: 18vw;
+    background-color: #1b2025;
+    border-radius: 1.5vw;
+    padding: 1.2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-family: 'Yatra One', sans-serif;
+    font-size: clamp(1.17rem, 1.842vw, 2.422rem);
+    color: #D9D9D9;
+    text-align: left;
+    margin-bottom: 1vw;
+}
+
+.description {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.88rem, 1.04vw, 1.2rem);
+    color: #8b8b8b;
+    text-align: left;
+    line-height: 1.4;
+    margin-bottom: 1vw;
+}
+
+.container {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4vw;
+    padding: 0.6vw 0;
+}
+
+.keyword {
+    width: auto;
+    padding: 0.3vw 0.8vw;
+    font-size: clamp(9.6px, 0.96vw, 1.08rem);
+    color: #aeadad;
+    border-radius: 100px;
+    border: 1px solid #aeadad;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CTA specific styles */
+.ctaContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 0.8vw;
+}
+
+.ctaTitle {
+    font-size: clamp(1.369rem, 2vw, 2.633rem);
+    color: #D9D9D9;
+    text-align: left;
+    margin-bottom: 0.4vw;
+    font-family: 'Yatra One', sans-serif;
+}
+
+.ctaSubtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1rem, 1.7vw, 2rem);
+    color: #8b8b8b;
+    text-align: left;
+    border-bottom: 1px solid #D9D9D9;
+    padding-bottom: 0.8vw;
+}
+
+.ctaButton {
+    width: 100%;
+    margin-top: auto;
+    padding: 0.8vw 0;
+    background-color: #8C8AFF;
+    color: #0E1014;
+    border-radius: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.88rem, 1.3vw, 2.5rem);
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+    background-color: #7371ff;
+    transform: scale(1.02);
+    box-shadow: 0 2px 8px rgba(140, 138, 255, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+    .skillsMain {
+        width: 92vw;
+        margin: 4vw;
+        padding: 1vw 3vw;
+        gap: 3vw;
+    }
+
+    .skill, .cta {
+        width: calc(50% - 1.5vw);
+        min-height: 35vw;
+        padding: 3vw;
+    }
+
+    .title, .ctaTitle {
+        font-size: clamp(1.474rem, 3.37vw, 2.106rem);
+        margin-bottom: 1.5vw;
+    }
+
+    .description {
+        display: none !important;
+    }
+
+    .container {
+        gap: 1.5vw;
+        padding: 0.6vw 0;
+    }
+
+    .keyword {
+        font-size: clamp(0.803rem, 2.007vw, 1.204rem);
+        padding: 1.2vw 1.8vw;
+    }
+
+    .ctaSubtitle {
+        font-size: clamp(0.88rem, 1.4vw, 1.6rem);
+        margin: 1.5vw 0;
+    }
+
+    .ctaButton {
+        font-size: clamp(0.88rem, 1.4vw, 1.6rem);
+        padding: 1.5vw 0;
+    }
+}
