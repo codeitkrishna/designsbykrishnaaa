@@ -61,26 +61,26 @@ const Work = () => {
             
             <div className={styles.mainContent}>
               <div className={styles.modalTitle}>
-                <img src="assets/images/anyhowMedia/anyhowMediaName.svg" alt="" />
+                <img src="../../assets/images/anyhowMedia/anyhowMediaName.svg" alt="" />
               </div>
               <div className={styles.logoVariations1}>
-                <div> <img src= "assets/anyhowMedia/logoVariation1.png" alt="" /> </div>
-                <div > <img src="assets/anyhowMedia/anyhowMediaBanner.png" alt="" id={styles.bannerImage} /></div>
-                <div> <img src= "assets/anyhowMedia/logoBg.png" alt="" /></div>
+                <div> <img src= "../../assets/anyhowMedia/logoVariation1.png" alt="" /> </div>
+                <div > <img src="../../assets/anyhowMedia/anyhowMediaBanner.png" alt="" id={styles.bannerImage} /></div>
+                <div> <img src= "../../assets/anyhowMedia/logoBg.png" alt="" /></div>
 
               </div>
               <div className={styles.logoVariations2}>
-                <div> <img src="assets/images/anyhowMedia/logoVariation3.png" alt="" /></div>
-                <div> <img src="assets/images/anyhowMedia/logoVariation2.png" alt="" /> </div>
-                <div> <img src="assets/images/anyhowMedia/logoVariation4.png" alt="" /></div>
+                <div> <img src="../../assets/images/anyhowMedia/logoVariation3.png" alt="" /></div>
+                <div> <img src="../../assets/images/anyhowMedia/logoVariation2.png" alt="" /> </div>
+                <div> <img src="../../assets/images/anyhowMedia/logoVariation4.png" alt="" /></div>
               </div>
               <div className={styles.mockups1}>
-                <div> <img src="assets/images/anyhowMedia/idsMockup.png" alt="" /></div>
-                <div> <img src="assets/images/anyhowMedia/businessCardMockup.png" alt="" /></div>
+                <div> <img src="../../assets/images/anyhowMedia/idsMockup.png" alt="" /></div>
+                <div> <img src="../../assets/images/anyhowMedia/businessCardMockup.png" alt="" /></div>
               </div>
               <div className={styles.mockups2}>
-                <div> <img src="assets/images/anyhowMedia/laptopMockup1.png" alt="" /></div>
-                <div> <img src="assets/images/anyhowMedia/laptopMockup2.png" alt="" /></div>
+                <div> <img src="../../assets/images/anyhowMedia/laptopMockup1.png" alt="" /></div>
+                <div> <img src="../../assets/images/anyhowMedia/laptopMockup2.png" alt="" /></div>
               </div>
 
             </div>
