@@ -29,7 +29,7 @@ const Contact = () => {
                             <button className={styles.categoryButton}>Graphic Design</button>
                             <span><div className={styles.arrow}>
 
-                                <img src="assets/images/arrow.png" alt="arrow" />
+                                <img src="src/assets/images/arrow.png" alt="arrow" />
 
                             </div>
                             </span>
@@ -38,7 +38,7 @@ const Contact = () => {
                             <button className={styles.categoryButton}>UI/UX Design</button>
                             <span><div className={styles.arrow}>
 
-                                <img src="assets/images/arrow.png" alt="arrow" />
+                                <img src="src/assets/images/arrow.png" alt="arrow" />
 
                             </div></span>
                         </div>
@@ -46,7 +46,7 @@ const Contact = () => {
                             <button className={styles.categoryButton}>Case Studies</button>
                             <span><div className={styles.arrow}>
 
-                                <img src='.asssets/images/arrow.png' alt="arrow" />
+                                <img src='src/assets/images/arrow.png' alt="arrow" />
 
                             </div></span>
                         </div>
