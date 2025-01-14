@@ -23,8 +23,8 @@ const Contact = () => {
               Get in touch
             </a>
             <div className={styles.socialButtons}>
-              <a href="#" className={styles.socialLink}>Instagram</a>
-              <a href="#" className={styles.socialLink}>LinkedIn</a>
+              <a href="https://www.instagram.com/_krishnaaagupta_?igsh=MXhzOTFpaWhpdnRhbA==" className={styles.socialLink}>Instagram</a>
+              <a href="https://www.linkedin.com/in/krishnaaagupta" className={styles.socialLink}>LinkedIn</a>
             </div>
           </div>
         </div>
