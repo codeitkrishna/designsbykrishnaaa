@@ -249,21 +249,30 @@ img[src="/arrow.png"] {
         margin-top: 2vw;
     }
 
+    .socialButtons {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        align-items:end;
+    }
+
     .socialDivider {
         margin: 6vw 0;
     }
 
     .buttonContainer {
-        gap: 3vw;
+        justify-content: space-between;
+        gap: 2vw;
     }
 
     .emailButton {
-        font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+        font-size: clamp(1.2rem, 3.5vw, 1rem);
         padding: 2vw 0;
+        min-width: 20vw !important;
     }
 
     .socialLink {
-        font-size: clamp(0.8rem, 2.5vw, 1rem);
+        font-size: clamp(1rem, 2.5vw, 1rem);
     }
 
     .categoryWrapper {

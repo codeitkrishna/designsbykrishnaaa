@@ -36,18 +36,28 @@
 
 @media screen and (max-width: 768px) {
     .tMain {
-        /* width: 96vw;
+        width: 96vw;
         height: auto;
-        margin: 2vw;
-        justify-content: center; */
-        display: none;
+        margin-bottom: 1vw;
+        justify-content: center;
+        flex-direction: column;
+        /* display: none; */
     }
 
-    /* .tImage {
-        display: none;
+     .tImage {
+        /* display: none; */
+        width:100%;
+        /* height: auto; */
+        aspect-ratio: 4/3 !important;
+        padding:4.5vw;
+        border-radius: 3vw;
     }
 
-    .testimonials {
+    .tImage img{
+        border-radius: 3vw;
+    }
+
+    /* .testimonials {
         width: 86vw;
         height: calc(88vw * 24/45);
         min-height: 150px;
