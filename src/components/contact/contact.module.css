@@ -330,3 +330,61 @@ img[src="/arrow.png"] {
         height: 2.6vw;
     }
 }
+
+.allWork {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .glassOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+    z-index: 100;
+  }
+  
+  .overlayContent {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.65rem, 2.1vw, 2.25rem);
+    padding: 2vw;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: scaleIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.9);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  /* Mobile styles update */
+  @media screen and (max-width: 768px) {
+    .overlayContent {
+      font-size: clamp(1.2rem, 3.8vw, 1.8rem);
+      padding: 4vw;
+    }
+  }
