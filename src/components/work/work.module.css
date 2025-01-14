@@ -195,18 +195,44 @@
 }
 
 .mockups1 img{
-    height: 15vw;
+    height: 20vw;
     aspect-ratio: 1.5;
 }
 .mockups2 img{
-    height: 15vw;
+    height: 20vw;
     aspect-ratio: 1.5;
 }
-
   @media screen and (max-width: 768px) {
     .modalContent {
-      width: 90vw;
-      max-height: 85vh;
-      padding: 1.5rem;
+        width: 90vw;
+        max-height: 85vh;
+        padding: 1.5rem;
     }
-  }
+
+    .logoVariations1,
+    .logoVariations2,
+    .mockups1,
+    .mockups2 {
+        flex-direction: column;
+        align-items: center; /* Center the images */
+        gap: 2rem; /* Add spacing between the images */
+    }
+    .logoVariations1 #bannerImage{
+        width: 90%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 90vw;
+    }
+    .logoVariations1 img,
+    .logoVariations2 img,
+    .mockups1 img,
+    .mockups2 img {
+        width: 90%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 90vw; /* Ensure images fit within the screen */
+    }
+
+    .modalTitle img {
+        width: 80%;
+        margin-bottom: 1rem; /* Add spacing below the title */
+    }
+}

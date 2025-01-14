@@ -1,42 +1,69 @@
-import { useEffect } from 'react';
-import './CustomCursor.css';
+import React, { useEffect, useRef } from "react";
+import "./CustomCursor.css";
 
 const CustomCursor = () => {
+  const dotRef = useRef(null);
+  const hoverRef = useRef(null);
+  const mousePosition = useRef({ x: 0, y: 0 });
+  const rafId = useRef(null);
+
   useEffect(() => {
-    const cursor = document.querySelector('.cursor');
-    
-    const moveCursor = (e) => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
+    const dot = dotRef.current;
+    const hover = hoverRef.current;
+
+    // Update cursor positions
+    const updateCursorPosition = () => {
+      if (dot && hover) {
+        const { x, y } = mousePosition.current;
+
+        // Update positions
+        dot.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        hover.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      }
+      rafId.current = requestAnimationFrame(updateCursorPosition);
     };
 
-    const addScaleEffect = () => {
-      cursor.style.transform = 'translate(-50%, -50%) scale(2)';
+    // Handle mouse move
+    const onMouseMove = (e) => {
+      mousePosition.current = { x: e.clientX, y: e.clientY };
     };
 
-    const removeScaleEffect = () => {
-      cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-    };
+    // Hover effect for interactive elements
+    const addHoverEffect = () => hover.classList.add("active");
+    const removeHoverEffect = () => hover.classList.remove("active");
 
-    window.addEventListener('mousemove', moveCursor);
+    // Start animation loop
+    rafId.current = requestAnimationFrame(updateCursorPosition);
 
-    // Add hover effect for all clickable elements
-    const clickables = document.querySelectorAll('a, button, span');
-    clickables.forEach(el => {
-      el.addEventListener('mouseenter', addScaleEffect);
-      el.addEventListener('mouseleave', removeScaleEffect);
+    // Add mousemove event
+    window.addEventListener("mousemove", onMouseMove, { passive: true });
+
+    // Add hover listeners
+    const interactiveElements = document.querySelectorAll(
+      "a, button, input, select, span, textarea, [role='button']"
+    );
+    interactiveElements.forEach((el) => {
+      el.addEventListener("mouseenter", addHoverEffect);
+      el.addEventListener("mouseleave", removeHoverEffect);
     });
 
+    // Cleanup
     return () => {
-      window.removeEventListener('mousemove', moveCursor);
-      clickables.forEach(el => {
-        el.removeEventListener('mouseenter', addScaleEffect);
-        el.removeEventListener('mouseleave', removeScaleEffect);
+      cancelAnimationFrame(rafId.current);
+      window.removeEventListener("mousemove", onMouseMove);
+      interactiveElements.forEach((el) => {
+        el.removeEventListener("mouseenter", addHoverEffect);
+        el.removeEventListener("mouseleave", removeHoverEffect);
       });
     };
   }, []);
 
-  return <div className="cursor"></div>;
+  return (
+    <>
+      <div ref={dotRef} className="cursor-dot" />
+      <div ref={hoverRef} className="cursor-hover" />
+    </>
+  );
 };
 
 export default CustomCursor;

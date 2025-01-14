@@ -24,16 +24,16 @@ const Navbar = () => {
     return (
         <div className={`navbarMain ${scrollState ? 'scrolled' : ''}`}>
             <div className='link'>
-                <div onClick={() => scrollToSection('work')} className='nav-links'>Work</div>
+                <span><div onClick={() => scrollToSection('work')} className='nav-links'>Work</div></span>
             </div>
             <div className='link'>
-                <div onClick={() => scrollToSection('skills')} className='nav-links'>About</div>
+                <span><div onClick={() => scrollToSection('skills')} className='nav-links'>About</div></span>
             </div>
             <div className='link'>
-                <div onClick={() => scrollToSection('testimonials')} className='nav-links'>Testimonials</div>
+                <span><div onClick={() => scrollToSection('testimonials')} className='nav-links'>Testimonials</div></span>
             </div>
             <div className='link'>
-                <div onClick={() => scrollToSection('contact')} className='nav-links'>Contact</div>
+                <span><div onClick={() => scrollToSection('contact')} className='nav-links'>Contact</div></span>
             </div>
         </div>
     )
